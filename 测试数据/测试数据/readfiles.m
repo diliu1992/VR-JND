@@ -1,0 +1,102 @@
+clear;
+txtPath = 'C:\Users\刘迪\Desktop\FD-JND IEEE\测试数据\测试数据\luminance';
+txtFiles = dir(fullfile(txtPath, '*.txt'));
+luminance = zeros(80,6,8);
+for i = 1:length(txtFiles)
+    filename = txtFiles(i).name;
+    delimiter = {',',' ',':'};
+startRow = 27;
+
+%% 每个文本行的格式字符串:
+%   列10: 双精度值 (%f)
+%	列18: 双精度值 (%f)
+%   列19: 双精度值 (%f)
+%	列20: 双精度值 (%f)
+%   列22: 双精度值 (%f)
+%	列24: 双精度值 (%f)
+% 有关详细信息，请参阅 TEXTSCAN 文档。
+formatSpec = '%*s%f%*s%*s%*s%*s%*s%*s%*s%f%*s%*s%*s%*s%*s%*s%*s%f%f%f%*s%*s%*s%f%[^\n\r]';
+
+%% 打开文本文件。
+fileID = fopen([txtPath,'\',filename],'r');
+
+%% 根据格式字符串读取数据列。
+% 该调用基于生成此代码所用的文件的结构。如果其他文件出现错误，请尝试通过导入工具重新生成代码。
+dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'MultipleDelimsAsOne', true, 'HeaderLines' ,startRow-1, 'ReturnOnError', false);
+
+%% 关闭文本文件。
+fclose(fileID);
+
+%% 对无法导入的数据进行的后处理。
+% 在导入过程中未应用无法导入的数据的规则，因此不包括后处理代码。要生成适用于无法导入的数据的代码，请在文件中选择无法导入的元胞，然后重新生成脚本。
+
+%% 创建输出变量
+luminance(:,:,i) = [dataArray{1:end-1}];
+%% 清除临时变量
+clearvars filename delimiter startRow formatSpec fileID dataArray ans;
+end
+
+%% 对结果进行排序
+for i=1:8
+    luminance(:,:,i)=sortrows(luminance(:,:,i),[1 6 2]);
+end
+
+%% 输出结果
+lum = zeros(80,12);
+lum(:,1)=luminance(:,1,1);
+lum(:,2)=luminance(:,6,1);
+lum(:,3)=luminance(:,2,1);
+for i=1:8
+    lum(:,4+i)=luminance(:,5,i);
+end
+
+txtPath = 'C:\Users\刘迪\Desktop\FD-JND IEEE\测试数据\测试数据\contrast';
+txtFiles = dir(fullfile(txtPath, '*.txt'));
+contrast = zeros(80,6,11);
+for i = 1:length(txtFiles)
+    filename = txtFiles(i).name;
+    delimiter = {',',' ',':'};
+startRow = 27;
+
+%% 每个文本行的格式字符串:
+%   列10: 双精度值 (%f)
+%	列18: 双精度值 (%f)
+%   列19: 双精度值 (%f)
+%	列20: 双精度值 (%f)
+%   列22: 双精度值 (%f)
+%	列24: 双精度值 (%f)
+% 有关详细信息，请参阅 TEXTSCAN 文档。
+formatSpec = '%*s%*s%*s%*s%*s%*s%*s%*s%*s%f%*s%*s%*s%*s%*s%*s%*s%f%f%f%*s%f%*s%f%[^\n\r]';
+
+%% 打开文本文件。
+fileID = fopen([txtPath,'\',filename],'r');
+
+%% 根据格式字符串读取数据列。
+% 该调用基于生成此代码所用的文件的结构。如果其他文件出现错误，请尝试通过导入工具重新生成代码。
+dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'MultipleDelimsAsOne', true, 'HeaderLines' ,startRow-1, 'ReturnOnError', false);
+
+%% 关闭文本文件。
+fclose(fileID);
+
+%% 对无法导入的数据进行的后处理。
+% 在导入过程中未应用无法导入的数据的规则，因此不包括后处理代码。要生成适用于无法导入的数据的代码，请在文件中选择无法导入的元胞，然后重新生成脚本。
+
+%% 创建输出变量
+contrast(:,:,i) = [dataArray{1:end-1}];
+%% 清除临时变量
+clearvars filename delimiter startRow formatSpec fileID dataArray ans;
+end
+
+%% 对结果进行排序
+for i=1:11
+    contrast(:,:,i)=sortrows(contrast(:,:,i),[5 6 1]);
+end
+ 
+%% 输出结果
+con = zeros(80,12);
+con(:,1)=contrast(:,5,1);
+con(:,2)=contrast(:,6,1);
+con(:,3)=contrast(:,1,1);
+for i=1:11
+    con(:,4+i)=contrast(:,4,i);
+end
