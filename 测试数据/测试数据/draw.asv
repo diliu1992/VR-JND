@@ -1,4 +1,4 @@
-close all
+% close all
 clear
 clc
 load('stat.mat');
@@ -29,7 +29,7 @@ mean_bg_jnd_depth(5) = mean(lum(lum(:,3)==1.2,4));
     Z=griddata(x,y,z,X,Y);    
     surf(X,Y,Z);
     xlabel('Luminance'); 
-    ylabel('Eccentricity');
+    ylabel('E');
     zlabel('JND');   
     hold on
     plot3(x,y,z,'*');
@@ -56,23 +56,9 @@ figure
     [X,Y]=meshgrid(0:20:60,10:10:40);
     Z=griddata(x,y,z,X,Y);
     surf(X,Y,Z);
-    xlabel('Contrast'); 
-    ylabel('Eccentricity');
+    xlabel('C'); 
+    ylabel('E');
     zlabel('JND');    
     hold on;
     plot3(x,y,z,'*');
 % end
-figure
-% for i = [0.8,0.9,1.0,1.1,1.2]
-%     ti = (con(:,3)==i);
-    x=con(:,1);
-    y=con(:,3);
-    z=ave_jnd_eh;
-    [X,Y]=meshgrid(0:20:60,0.8:0.1:1.2);
-    Z=griddata(x,y,z,X,Y);
-    surf(X,Y,Z);
-    xlabel('Contrast'); 
-    ylabel('Depth');
-    zlabel('JND');    
-    hold on;
-    plot3(x,y,z,'*');

@@ -110,4 +110,15 @@ Y.~Zhao, Z.~Chen, C.~Zhu, and Y.~P. Tan, ``Binocular just-noticeable-difference
   model for stereoscopic images,'' \emph{IEEE Signal Process. Lett.}, vol.~18,
   no.~1, pp. 19--22, 2011.
 
+\bibitem{RN14}
+L.~Itti, C.~Koch, and E.~Niebur, ``A model of saliency-based visual attention
+  for rapid scene analysis,'' \emph{Pattern Analysis and Machine Intelligence,
+  IEEE Transactions on}, vol.~20, no.~11, pp. 1254--1259, 1998.
+
+\bibitem{RN636}
+V.~D. Silva, A.~Fernando, S.~Worrall, and H.~K. Arachchi, ``Sensitivity
+  analysis of the human visual system for depth cues in stereoscopic 3-d
+  displays,'' \emph{IEEE Trans. Multimedia}, vol.~13, no.~3, pp. 498--506,
+  2011.
+
 \end{thebibliography}

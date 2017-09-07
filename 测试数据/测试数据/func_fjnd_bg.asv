@@ -1,16 +1,16 @@
 function fjnd_bg = func_fjnd_bg(bg,v,e)
-fjnd_bg = func_luminance_adaption(bg).*f1(e)/25;
+fjnd_bg = func_luminance_adaption(bg).*f1(e);
 return
 %% Luminance adaption of SJND
 function jnd_lum_adapt =  func_luminance_adaption(bg)
 % T0 = 14;
 % gamma = 3 / 128;
 % jnd_lum_adapt = (T0 * (1 - sqrt((256-bg) / 128))+2).*(bg >= 128) + (gamma * (-bg + 128) + 2).*(bg < 128);
-jnd_lum_adapt = 0.000269*power(bg,2)-0.03652*bg+13.5;
+jnd_lum_adapt = 2.2*(bg^2)+2.8*bg+13.1;
 return
 %% Multiplier for bg of SJND
 function fact_lum_fov = f1(e)
-fact_lum_fov = 0.037*power(e,1.5)+9.65;
+fact_lum_fov = 1.1.^(e-10.8)+10.8;
 return
 function fact_lum_fov = func_factor_lum_fov(bg, v, e)
 fact_lum_fov = func_W_lum_fov(v,e).^func_I_lum_fov(bg);

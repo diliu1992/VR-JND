@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  18 AUG 2017 16:45
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  7 SEP 2017 20:35
 entering extended mode
 **FD-JND.tex
-("C:\Users\刘迪\Desktop\FD-JND IEEE\FD-JND.tex"
+(D:\Project\VR-JND\FD-JND.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-("C:\Users\刘迪\Desktop\FD-JND IEEE\IEEEtran.cls"
+(D:\Project\VR-JND\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -227,8 +227,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-("C:\Users\刘迪\Desktop\FD-JND IEEE\FD-JND.aux")
+) (D:\Project\VR-JND\FD-JND.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 302.
 LaTeX Font Info:    ... okay on input line 302.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 302.
@@ -260,72 +259,173 @@ LaTeX Font Info:    ... okay on input line 302.
 
 
 ]
+<figure/blndspot.jpg, id=9, 376.40625pt x 278.54062pt>
+File: figure/blndspot.jpg Graphic file (type jpg)
 
-pdfTeX warning: pdflatex.exe (file C:/Users/刘迪/Desktop/FD-JND IEEE/figure/D
-rawing1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
- allowed
-<figure/Drawing1.pdf, id=9, 445.8256pt x 539.91714pt>
+<use figure/blndspot.jpg>
+Package pdftex.def Info: figure/blndspot.jpg used on input line 415.
+(pdftex.def)             Requested size: 258.0pt x 190.93517pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 415--415
+ [][] 
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file D:/Project/VR-JND/figure/Drawing1.pdf): PDF 
+inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figure/Drawing1.pdf, id=10, 445.8256pt x 539.91714pt>
 File: figure/Drawing1.pdf Graphic file (type pdf)
 
 <use figure/Drawing1.pdf>
-Package pdftex.def Info: figure/Drawing1.pdf used on input line 454.
+Package pdftex.def Info: figure/Drawing1.pdf used on input line 447.
 (pdftex.def)             Requested size: 258.0pt x 312.45189pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 454--454
+Overfull \hbox (6.0pt too wide) in paragraph at lines 447--447
  [][] 
  []
 
-<figure/Drawing2.pdf, id=10, 388.80257pt x 279.23322pt>
+[2 <D:/Project/VR-JND/figure/blndspot.jpg>]
+<figure/Drawing2.pdf, id=21, 388.80257pt x 279.23322pt>
 File: figure/Drawing2.pdf Graphic file (type pdf)
 
 <use figure/Drawing2.pdf>
-Package pdftex.def Info: figure/Drawing2.pdf used on input line 466.
+Package pdftex.def Info: figure/Drawing2.pdf used on input line 461.
 (pdftex.def)             Requested size: 258.0pt x 185.30002pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 466--466
+Overfull \hbox (6.0pt too wide) in paragraph at lines 461--461
  [][] 
  []
 
 
-Underfull \vbox (badness 1281) has occurred while \output is active []
 
- [2 <C:/Users/刘迪/Desktop/FD-JND IEEE/figure/Drawing1.pdf>]
-
-pdfTeX warning: pdflatex.exe (file C:/Users/刘迪/Desktop/FD-JND IEEE/figure/C
-ontrastSketch.pdf): PDF inclusion: found PDF version <1.6>, but at most version
- <1.5> allowed
-<figure/ContrastSketch.pdf, id=25, 961.20905pt x 541.64162pt>
+pdfTeX warning: pdflatex.exe (file D:/Project/VR-JND/figure/ContrastSketch.pdf)
+: PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<figure/ContrastSketch.pdf, id=22, 961.20905pt x 541.64162pt>
 File: figure/ContrastSketch.pdf Graphic file (type pdf)
 
 <use figure/ContrastSketch.pdf>
-Package pdftex.def Info: figure/ContrastSketch.pdf used on input line 474.
+Package pdftex.def Info: figure/ContrastSketch.pdf used on input line 469.
 (pdftex.def)             Requested size: 247.6778pt x 139.55898pt.
- ("C:\Users\刘迪\Desktop\FD-JND IEEE\FD-JND.bbl") [3 <C:/Users/刘迪/Desktop
-/FD-JND IEEE/figure/Drawing2.pdf> <C:/Users/刘迪/Desktop/FD-JND IEEE/figure/C
-ontrastSketch.pdf>]
-("C:\Users\刘迪\Desktop\FD-JND IEEE\FD-JND.aux") ) 
+File: figure/ContrastSketch.pdf Graphic file (type pdf)
+ <use figure/ContrastSketch.pdf>
+Package pdftex.def Info: figure/ContrastSketch.pdf used on input line 482.
+(pdftex.def)             Requested size: 247.6778pt x 139.55898pt.
+ [3 <D:/Project/VR-JND/figure/Drawing1.pdf> <D:/Project/VR-JND/figure/Drawing2.
+pdf> <D:/Project/VR-JND/figure/ContrastSketch.pdf>]
+<figure/subjective_result_bg_e.pdf, id=37, 404.70497pt x 282.70018pt>
+File: figure/subjective_result_bg_e.pdf Graphic file (type pdf)
+
+<use figure/subjective_result_bg_e.pdf>
+Package pdftex.def Info: figure/subjective_result_bg_e.pdf used on input line 5
+25.
+(pdftex.def)             Requested size: 404.70398pt x 282.69948pt.
+
+<figure/subjective_result_bg_d.pdf, id=38, 404.70497pt x 282.70018pt>
+File: figure/subjective_result_bg_d.pdf Graphic file (type pdf)
+
+<use figure/subjective_result_bg_d.pdf>
+Package pdftex.def Info: figure/subjective_result_bg_d.pdf used on input line 5
+26.
+(pdftex.def)             Requested size: 404.70398pt x 282.69948pt.
+
+Overfull \hbox (4.0832pt too wide) in paragraph at lines 525--527
+ [][] 
+ []
+
+
+Overfull \hbox (4.0832pt too wide) in paragraph at lines 525--527
+ [] 
+ []
+
+<figure/fitted_bgjnd_bg.pdf, id=39, 537.33836pt x 354.97018pt>
+File: figure/fitted_bgjnd_bg.pdf Graphic file (type pdf)
+
+<use figure/fitted_bgjnd_bg.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_bg.pdf used on input line 533.
+(pdftex.def)             Requested size: 537.33705pt x 354.96931pt.
+
+<figure/fitted_bgjnd_e.pdf, id=40, 537.58531pt x 355.72299pt>
+File: figure/fitted_bgjnd_e.pdf Graphic file (type pdf)
+
+<use figure/fitted_bgjnd_e.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_e.pdf used on input line 534.
+(pdftex.def)             Requested size: 537.584pt x 355.7221pt.
+
+<figure/fitted_bgjnd_depth.pdf, id=41, 546.13123pt x 354.97018pt>
+File: figure/fitted_bgjnd_depth.pdf Graphic file (type pdf)
+
+<use figure/fitted_bgjnd_depth.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_depth.pdf used on input line 535.
+(pdftex.def)             Requested size: 546.12988pt x 354.96931pt.
+ [4 <D:/Project/VR-JND/figure/subjective_result_bg_e.pdf> <D:/Project/VR-JND/fi
+gure/subjective_result_bg_d.pdf> <D:/Project/VR-JND/figure/fitted_bgjnd_bg.pdf>
+ <D:/Project/VR-JND/figure/fitted_bgjnd_e.pdf> <D:/Project/VR-JND/figure/fitted
+_bgjnd_depth.pdf>]
+<figure/subjective_result_eh_e.pdf, id=65, 401.24907pt x 282.70018pt>
+File: figure/subjective_result_eh_e.pdf Graphic file (type pdf)
+
+<use figure/subjective_result_eh_e.pdf>
+Package pdftex.def Info: figure/subjective_result_eh_e.pdf used on input line 5
+75.
+(pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
+
+<figure/subjective_result_eh_d.pdf, id=66, 401.24907pt x 282.70018pt>
+File: figure/subjective_result_eh_d.pdf Graphic file (type pdf)
+
+<use figure/subjective_result_eh_d.pdf>
+Package pdftex.def Info: figure/subjective_result_eh_d.pdf used on input line 5
+76.
+(pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
+
+Overfull \hbox (4.0883pt too wide) in paragraph at lines 575--577
+ [][] 
+ []
+
+
+Overfull \hbox (4.0883pt too wide) in paragraph at lines 575--577
+ [] 
+ []
+
+File: figure/fitted_bgjnd_bg.pdf Graphic file (type pdf)
+<use figure/fitted_bgjnd_bg.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_bg.pdf used on input line 583.
+(pdftex.def)             Requested size: 537.33705pt x 354.96931pt.
+File: figure/fitted_bgjnd_e.pdf Graphic file (type pdf)
+ <use figure/fitted_bgjnd_e.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_e.pdf used on input line 584.
+(pdftex.def)             Requested size: 537.584pt x 355.7221pt.
+File: figure/fitted_bgjnd_depth.pdf Graphic file (type pdf)
+
+<use figure/fitted_bgjnd_depth.pdf>
+Package pdftex.def Info: figure/fitted_bgjnd_depth.pdf used on input line 585.
+(pdftex.def)             Requested size: 546.12988pt x 354.96931pt.
+ (D:\Project\VR-JND\FD-JND.bbl [5 <D:/Project/VR-JND/figure/subjective_result_e
+h_e.pdf> <D:/Project/VR-JND/figure/subjective_result_eh_d.pdf>]) [6
+
+] (D:\Project\VR-JND\FD-JND.aux) ) 
 Here is how much of TeX's memory you used:
- 3128 strings out of 495354
- 45099 string characters out of 3183859
- 110631 words of memory out of 3000000
- 6288 multiletter control sequences out of 15000+200000
- 41173 words of font info for 78 fonts, out of 3000000 for 9000
+ 3194 strings out of 495354
+ 46510 string characters out of 3183859
+ 111728 words of memory out of 3000000
+ 6340 multiletter control sequences out of 15000+200000
+ 44032 words of font info for 84 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 27i,10n,28p,1876b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/CTEX/MiKTeX/fonts/enc/d
-vips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/CTEX/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pf
-b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fon
-ts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb
-><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on FD-JND.pdf (3 pages, 214407 bytes).
+ 27i,8n,28p,1870b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.e
+nc}<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/
+CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr5.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/CTEX/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/M
+iKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/u
+tmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FD-JND.pdf (6 pages, 294129 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

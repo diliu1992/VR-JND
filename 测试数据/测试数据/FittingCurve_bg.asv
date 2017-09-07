@@ -16,7 +16,7 @@ depth = lum(:,3);
 %fjnd
 v = 1536;
 fjnd_bg = func_fjnd_bg(bg,v,e);
-AVG_Ratio = jnd_bg;
+AVG_Ratio = jnd_bg./fjnd_bg;
 
 %cftool;
 
@@ -27,13 +27,12 @@ AVG_Ratio = jnd_bg;
 
 %function F = myfun(p, data)
 %     F = @(p, data)((1+p(1))./(data(:,1)+p(1))).^((log(data(:,2) + 1)+ p(2)).^2 + p(3));
-%  F = @(p, data)(p(1)*data(:,1)+p(2));
- F = @(p, data)(p(1)*data(:,1).^2+p(2)*data(:,1)+p(3)).*(p(4)*data(:,2).^p(5)+p(6)).*(p(7)*data(:,3)+p(8));
+ F = @(p, data)(p(1)*data(:,1)+p(2));
 %end
 
 %ÄâºÏÏµÊý
 N = length(AVG_Ratio);
-[p SSE residual]=  lsqcurvefit(F, [0 0 0 0 0 0 0 0], [bg e depth], AVG_Ratio);
+[p SSE residual]=  lsqcurvefit(F, [0 0], [depth bg], AVG_Ratio);
 
 p
 SSE

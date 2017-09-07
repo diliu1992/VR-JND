@@ -395,14 +395,31 @@ In the literature, several computational models have been proposed for estimatin
 
 3D image provides an additional experience of depth to its viewers. Depth perception is the result of several depth cues, including monocular ones, e.g. occlusion, perspective convergence, motion parallax, texture gradient, etc. and binocular ones e.g. convergence and binocualr disparity \cite{RN631}. Among these cues, binocular disparity, which refers to the lateral displacement of an object seen by the left and right eyes, is widely used in the stereopsis to provide viewers with 3D experience. Thus, binocular disparity is the mostly used as the representative depth feature for stereoscopic viewing. 
 
-Some studies have been done to investigate the characteristic of HVS to depth feature. Eye fixation experiments in \cite{RN150,RN138,RN148} all indicated a depth bias that objects closer to the viewer attract attention earlier than distant objects and always attract the most eye fixation. Yand \textit{et al.} found that the distributions of natural disparities in both indoor and outdoor scenes are centered at zero, have high peaks, and span about 5 deg \cite{RN607}. In \cite{RN641, RN644}, Silva \textit{et al.} investigated the sensitivity of the HVS for depth cues in 3D dispalys and proposed the just noticeable depth difference (JNDD) model for suppressing the unnecessary spatial depth details of depth maps. The JNDD modle is adopted by Jung \textit{et al.} for depth sensation enhancement in \cite{RN643,RN640}. In \cite{RN637}, Zhao \textit{et al.} considered binocular combination and rivalry and proposed the a binocular JND (BJND) model in response to asymmetric noises in a pair of stereoscopic images.
+Some studies have been done to investigate the characteristic of HVS to depth feature. Eye fixation experiments in \cite{RN150,RN138,RN148} all indicated a depth bias that objects closer to the viewer attract attention earlier than distant objects and always attract the most eye fixation. Yand \textit{et al.} found that the distributions of natural disparities in both indoor and outdoor scenes are centered at zero, have high peaks, and span about 5 deg \cite{RN607}. In \cite{RN641, RN644}, Silva \textit{et al.} investigated the sensitivity of the HVS for depth cues in 3D dispalys and proposed the just noticeable depth difference (JNDD) model for suppressing the unnecessary spatial depth details of depth maps. The JNDD model is adopted by Jung \textit{et al.} for depth sensation enhancement in \cite{RN643,RN640}. In \cite{RN637}, Zhao \textit{et al.} considered binocular combination and rivalry and proposed the a binocular JND (BJND) model in response to asymmetric noises in a pair of stereoscopic images.
 
 To our best knowledge, none of the existing JND models are developed for stereoscopic images which mapping the JND of pixel to the corresponding relative disparity between the pixel and the eye fixation. In this paper, we experimently investigate the function of JND to depth by an HTC VIVE and propose an improved and extended FJND model for stereoscopic image which take relative disparity into the JND function. As it is the first research to investigate JND in virtual reality, the proposed model is named virtual reality based just-noticeable-distortion (VR-JND) model.
 
 The rest of this paper is organized as follows. In Section \uppercase\expandafter{\romannumeral2}, a brief introduction to the 2D just-noticeable-distortion models considered in this paper is provided. Mathematical model of the proposed foveated disparity just-noticeable-distortion (VR-JND) characteristic is presented in Section \uppercase\expandafter{\romannumeral3}. Section \uppercase\expandafter{\romannumeral4} presents the experimental validation of the derived mathematical models and Section \uppercase\expandafter{\romannumeral5} concludes the paper.
 
 \section{FJND Model}
-It is widely accepted that background luminance adaptation and spatial contrast masking are two mainly factors which affect JND \cite{RN634, RN639}. Since the visual acuity decreases when the distance from the fovea increases, the visibility threshold increases with increased eccentricity. JND that varies according to the eccentricity of the pixel to the fovea on retina is named foveated JND (FJND). According to the works in \cite{RN635, RN633}, the FJND is defined as
+It is widely accepted that background luminance adaptation and spatial contrast masking are two main factors which affect JND. On this basis, the first foundation work of SJND was done in \cite{RN634}. However, retinal eccentriciy is another factor which affects JND. The density of the cone and ganglion cells drops with the increased retinal eccentricity. As a result, the visual acuity decreases when the distance from the fovea increases as shown in Fig. \ref{fig:Visualacuity} and the visibility threshold increases with increased eccentricity. Given the fixation point $\left( x_f,y_f\right)$ and viewing distance $v$, the retinal eccentricity of a certain point $P\left(x,y\right)$ can be calculated as:
+\begin{equation}
+e\left (  v,p\right )=\tan^{-1}\left ( \frac{d}{v} \right )
+\end{equation}
+where \begin{equation}
+d= \sqrt{\left ( x-x_f \right )^2+\left ( y-y_f \right )^2 }
+\end{equation}
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\includegraphics[width=0.5\textwidth]{blndspot}\\
+	\caption{Visual acuity as a function of retinal eccentricity.}
+	\label{fig:Visualacuity}
+\end{figure}
+
+The JND that varies according to the eccentricity of the pixel to the fovea on retina is named foveated JND (FJND). The usual method to predict eye fixtion for images is by using saliency detection model, like Itti's model in \cite{RN14}. Saliency is the result of attentional selection that intermediate and higher visual processes appear to select a subset of the available sensory information before further processing.
+Human alternate saccades and visual fixation to focus the eyesight on objects of interest, the fixation is projected to the centre of fovea which has the highest visual acuity. Thus, it offers human the ability to interpret complex scenes in real time, despite the limited speed of the neuronal hardware available for such tasks. JND is used to remove perceptual redundancy in image compression, exploiting the foveation property that increase the visual distortion threshold for parts of image which are unlikely to be fixated is perceptually friendly. 
+According to the works in \cite{RN635, RN633}, the FJND is defined as
 \begin{equation}
 FJND=F_1+F_2-C^{gr}\cdot \min \{F_1, F_2 \}
 \label{eq1}
@@ -416,38 +433,14 @@ F_1=f_1\cdot m_1
 F_2=f_2\cdot m_2
 \label{eq3}
 \end{equation}
-\begin{equation}
-f_1\left(bg\right)=\begin{cases}
-{14\times \left ( 1-\left (\frac{bg}{127}  \right)^{1/2}  \right )+2} & {\text{ if } bg\leq 127}\\ 
-\frac{3}{128}\times \left(bg - 127\right)+2 & \text{ if } {bg> 127} 
-\end{cases}
-\end{equation}
-\begin{equation}
-f_2\left ( bg,mg \right )=mg\times \alpha \left ( bg \right )+\beta \left ( bg \right )
-\end{equation}
-\begin{equation}
-m_1\left ( bg,v,e \right )=\left ( 2-S_f\left ( v,e \right ) \right ) ^{\eta_1 \left ( bg \right )}
-\end{equation}
-\begin{equation}
-m_2\left ( eh,v,e \right )=\left ( \frac{1+0.05}{S_f\left ( v,e \right )+0.05} \right ) ^{\eta_2 \left ( eh \right )}
-\end{equation}
-\begin{equation}
-S_f\left ( v,e \right )=\frac{f_m\left ( v,e \right )}{f_m\left ( v,0 \right )}
-\end{equation}
-\begin{equation}
-f_m\left ( v,e \right )=\min \left ( \frac{2.3\times \ln \left ( 64 \right )}{0.106\times \left ( e+2.3 \right )},\frac{\pi v}{360} \right )
-\end{equation}
-\begin{equation}
-\eta_1 \left ( bg \right )=0.5+\frac{1}{\sqrt{2\pi }\sigma }\exp \left ( -\frac{\left ( \log_{2}\left ( bg+1 \right ) -\mu \right )^2}{2\sigma ^2} \right )
-\end{equation}
-\begin{equation}
-\eta_2 \left ( eh \right )=\left (  \log \left ( \frac{eh}{255}+1.5 \right )\right )^2+0.66
-\end{equation}
+where $m_1$ and $m_2$ measure the luminance adaptation and spatial contrast masking effect respectively, $f_1$ and $f_2$ are the foveation models, which calculate the foveation effect of $m_1$ and $m_2$ respectively.
+
 \section{VR-JND Model}
+Depth is another essential element in the real world viewing. In \cite{RN636}, it was demonstrated that human eyes are less sensitive to the depth difference when the position of the displayed image become closer to or farther away from the display screen and an approximated JNDD formula was provided. The JNDD model can be used for depth sensation enhancement \cite{RN641}. As demonstrated in by eye movement experiments in \cite{}, depth is another important feature beside color that affect visual attention in the stereoscopic view. It is named the depth-bias that human tend to pay attention to objects closer to them. Inspired by these work, we propose that depth might also have an effect on the JND in the 3D case. In this section, we do experiments with VR equipment to investigate the depth effect on JND modeling. 
 
 \subsection{Experimental Setup}
 
-Instead of displaying images on monitors as in \cite{RN637}, we use HTC VIVE glasses to present stereoscopic images. Bacause we aim to study the influence of relative disparity on JND in our experiment, and VR HMD has the advantage to fix the viewing distance which leads to a more reliable JND model. HTC VIVE has an OLED with resolution of 1080*1280 per eye and the refreshing rate of 90 Hz. By showing two images on two seperate screen before eyes, VR HMD can provide an imersive 3D environment. The distance from the eyes of viewers and the screens is fixed, when viewers fixed their attention to a point in the virtual 3D environment, the relative disparity between this fixation and other point is easy to calculate and always even. The relationship between the point in space and points in two VR screens is shown as Fig. \ref{fig:Stereopsis}.
+Instead of displaying images on monitors as in \cite{RN637}, we use HTC VIVE glasses to present stereoscopic images. Bacause we aim to study the influence of relative disparity on JND in our experiment, and VR HMD has the advantage to fix the viewing distance which leads to a more reliable JND model. The HTC VIVE has an OLED with resolution of 1080*1280 per eye and the refreshing rate of 90 Hz. By showing two images on two seperate screen before eyes, VR HMD can provide an imersive 3D environment. The distance from the eyes of viewers and the screens is fixed, when viewers fixed their attention to a point in the virtual 3D environment, the relative disparity between this fixation and other point is easy to calculate and always even. The relationship between the point in space and points in two VR screens is shown as Fig. \ref{fig:Stereopsis}.
 \begin{figure}[!t]
 	\centering
 	% Requires \usepackage{graphicx}
@@ -459,7 +452,9 @@ Instead of displaying images on monitors as in \cite{RN637}, we use HTC VIVE gla
 Our experiments are divided into two parts. In the first part, we investigate the effect of relative depth on luminance adaptation, which is represented by $d_1$. In the second part, the relationship between relative depth and contrast masking effect is investigated and represented by $d_2$.
 
 \subsubsection{Luminance Adaptation}
-As is known that the background luminance $bg$ is a factor which affect the visual JND, thus it is also investigated in the VR JND experiments. Based on the aforementioned background information, we design an image pattern to explore the correlation of background luminance $bg$, eccentricity $e$, relative disparity $d$ and JND $T$. The experiment setup is shown as Fig. \ref{fig:Luminance}, and the sketch map of the VR stimuli is shown as Fig. \ref{fig:ContrastSketch}. There is a red cross at the center of the field of view at a constant viewing depth of $D$. During the whole experiment, subjects are requested to fix their attention at this red cross. During each trial, a chessboard noise will appears nearby the red cross in the virtual 3D space. Further more, in order to avoid the influence of predefined location of noise on subjects and help subjects keep their fixation at the center of red cross, the location of the noise is random and depends on three elements: the relative depth $d$ to the red cross in the viewing direction, the retinal eccentricity $e$ between the noise and the fixated red cross, and the central angle of noise to the center. As is known that stereopsis is generated by fusion of similar texture and caused by the dispartiy of the same pixel from different views. However, pure gray background is insufficient to make a three-dimensional experimence for the chessboard noise. To solve this problem, we put a square at center of the field and at the same depth field of the red cross as shown in Fig. \ref{fig:ContrastSketch} to help construct stereopsis. As mentioned, the visual acuity is identical at arbitrary angle of the circle of the same visual eccentricity. Thus JND in the luminance adaptation experiement is determined by the background luminance $bg$, eccentricity $e$ and relative depth $d$.
+As is known that the background luminance $bg$ is a factor which affect the visual JND, thus it is also investigated in the VR JND experiments. Based on the aforementioned background information, we design an image pattern to explore the correlation of background luminance $bg$, eccentricity $e$, relative depth $d$ and JND $T$. The experiment setup is shown as Fig. \ref{fig:Luminance}, and the sketch map of the VR stimuli is shown as Fig. \ref{fig:ContrastSketch}. There is a red cross at the center of the field of view at a constant viewing depth of $D$. During the whole experiment, subjects are requested to fix their attention at this red cross. During each trial, a chessboard noise will appears nearby the red cross in the virtual 3D space. Further more, in order to avoid the influence of predefined location of noise on subjects and help subjects keep their fixation at the center of red cross, the location of the noise is random and depends on three elements: the relative depth $d$ to the red cross in the viewing direction, the retinal eccentricity $e$ between the noise and the fixated red cross, and the central angle of noise to the center. As is known that stereopsis is generated by fusion of similar texture and caused by the dispartiy of the same pixel from different views. However, pure gray background is insufficient to make a three-dimensional experimence for the chessboard noise. To solve this problem, we put a square at center of the field and at the same depth field of the noise as shown in Fig. \ref{fig:LuminanceSketch} to help construct stereopsis. As mentioned, the visual acuity is identical at arbitrary angle of the circle of the same visual eccentricity. Thus JND in the luminance adaptation experiement is determined by the background luminance $bg$, eccentricity $e$ and relative depth $d$. 
+
+During each trial, $bg$, $e$ and $d$ of the stimulus are randomly selected. At the begginning of the test, the noise amplitude was set as 0, which means the noise area was invisible to subjects. With their attention fixed at the red cross, subjects were asked to increase the noise amplitude by 1 each time with the keyboard untill the noise area became visible and the corresponding amplitude was recorded as the just noticeable threshold $A$ for the current stimulus. 8 subjects with normal vision took part in this experiments. Each subject was asked to do 80 trials and they were informed that they can take a rest duirng the whole experiment once their eyes were fatigued.
 \begin{figure}[!t]
 	\centering
 	% Requires \usepackage{graphicx}
@@ -473,13 +468,130 @@ As is known that the background luminance $bg$ is a factor which affect the visu
 	% Requires \usepackage{graphicx}
 	\includegraphics[width=0.48\textwidth]{ContrastSketch}\\
 	\caption{Stimuli in the VR glasses of luminance adaptation experiment.}
-	\label{fig:ContrastSketch}
-	 
+	\label{fig:LuminanceSketch} 
 \end{figure}
 \subsubsection{Contrast Masking}
-To investigate the relation The pattern consists of a circular area whose radius is calculated with viewing distance and eccentricity,. 
-\section{Experimental Results}
+To investigate the effect of depth on contrast masking, we designed the experimental stimuli as Fig. \ref{fig:ContrastSketch}. The basic setup of contrast masking experiments are similar with the luminance adaptation experiments, the difference is that in the contrast masking, the pattern consists of a circular area instead of the square. The red cross is at the viewing distance $D$, the distance of the circular area to the red cross is the relative depth $d$ and the radius of the cirlular area can be calculated as
+\begin{equation}
+r=\left ( D-d \right )\cdot \tan \left ( e \right )
+\end{equation}
+The chessboard noise will be located along the edge of the circle and at the same depth of the circle. Luminance contrast between the circle and the background is $eh$. The circle can be used to construct stereopsis. In the contrast masking experiments, JND is determined by the luminance contrast $eh$, eccentricity $e$ and relative depth $d$. Testing process is similar with that in the luminance adaptation experiments, 8 subjects with normal vision took part in this experiment. Each subject was asked to do 80 trials and they were informed that they can take a rest duirng the whole experiment once their eyes were fatigued.
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\includegraphics[width=0.48\textwidth]{ContrastSketch}\\
+	\caption{Stimuli in the VR glasses of luminance adaptation experiment.}
+	\label{fig:ContrastSketch} 
+\end{figure}
+\section{Experimental Results and Analysis}
 
+\subsection{Luminance Adaptation}
+Subjective experiment result of luminance adaptation part is shown in Fig. \ref{fig:subjective_result_bg}. The luminance adaptation effect is influenced by three factors, the relationship can not be illustrated geometrically. However, we can illustrate the relationship between jnd and two factors with a 3D surface by averaging on the rest dimension. As shown in Fig. \ref{fig:subjective_result_bg}, the surface is averaging on the depth dimension, and it shows the relationship between jnd with background luminance and retinal eccentricity. As luminance increases, the JND drops at the beginning and increases when the luminance gets higher. The extreme point is at around the luminance of $50$. In order to form the function between jnd and three factors, firtly, we investigate the relationshio between jnd and one fator once as shown in the Fig. \ref{fig:curve_fitting_bg}. The mean bg-jnd of $y$ axis represents the average jnd value for the variable of $x$ axis. The fitting curve of jnd to background luminance, retinal eccentricity and depth can be represented by $m_1$, $f_1$ and $d_1$ respectively as
+\begin{equation}
+m_1=a_1\cdot bg^2+a_2\cdot bg+a_3
+\end{equation}
+\begin{equation}
+f_1=a_4\cdot e^{a_5}+a_6
+\end{equation}
+\begin{equation}
+d_1=a_7\cdot d+a_8
+\end{equation}
+with $a_1=0.000269$, $a_2=-0.03652$, $a_3=13.5$, $a_4=0.037$, $a_5=-1.5$, $a_6=9.65$, $a_7=0.0466$, $a_8=0.0216$. The fitting precision for luminance adaptation is list in Tab. \ref{tab:fit_precition_bg}.
+and the luminance adaptation effect can be written by
+\begin{equation}
+F_{bg}=m_1\cdot f_1 \cdot d_1
+\end{equation}
+\begin{table}[htbp]
+	\centering
+	\caption{Fitting Precision of Luminance Adaptation Effect.}
+	\begin{tabular}{|c|c|c|c|}
+				\hline
+		Function & RMSE & R-square & Adjusted R-square \\
+				\hline
+		bg-jnd to bg & 1.317 & 0.946 & 0.837 \\
+				\hline
+		bg-jnd to e & 0.623 & 0.991 & 0.972 \\
+				\hline
+		bg-jnd to d & 0.33 & 0.967 & 0.956 \\
+				\hline
+		bg-jnd to bg, e and d & 2.238 & 0.812 & 0.807 \\
+				\hline
+	\end{tabular}%
+	\label{tab:fit_precition_bg}%
+\end{table}%
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\subfigure[]{\resizebox*{9cm}{!}{\includegraphics{subjective_result_bg_e}}}
+	\subfigure[]{\resizebox*{9cm}{!}{\includegraphics{subjective_result_bg_d}}}
+	\caption{Subjective experiment result of luminance adaptation part.}
+	\label{fig:subjective_result_bg}
+\end{figure}
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_bg}}}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_e}}}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_depth}}}
+	\caption{Fitting curves for luminance adaptatation experimental result.}
+	\label{fig:curve_fitting_bg}
+\end{figure}
+\subsection{Contrast Masking}
+Subjective experiment result of contrast masking part is shown in Fig. \ref{fig:subjective_result_eh}. The contrast masking effect is also influenced by three factors, the relationship can not be illustrated geometrically. However, we can illustrate the relationship between jnd and two factors with a 3D surface by averaging on the rest dimension. As shown in Fig. \ref{fig:subjective_result_eh}, the surface is averaging on the depth dimension, and it shows the relationship between jnd with luminance contrast and retinal eccentricity. As contrast increases, the JND increases as the luminance gets higher. In order to form the function between jnd and three factors, firtly, we investigate the relationshio between jnd and one fator once as shown in the Fig. \ref{fig:curve_fitting_eh}. The mean eh-jnd of $y$ axis represents the average jnd value for the variable of $x$ axis. The fitting curve of jnd to contrast, retinal eccentricity and depth can be represented by $m_2$, $f_2$ and $d_2$ respectively as
+\begin{equation}
+m_1=a_1\cdot bg^2+a_2\cdot bg+a_3
+\end{equation}
+\begin{equation}
+f_1=a_4\cdot e^{a_5}+a_6
+\end{equation}
+\begin{equation}
+d_1=a_7\cdot d+a_8
+\end{equation}
+The fitting precision for contrast masking is list in Tab. \ref{tab:fit_precition_eh}. The contrast masking effect can be written by
+\begin{equation}
+F_{eh}=m_2\cdot f_2 \cdot d_2
+\end{equation}
+\begin{table}[htbp] 
+	\centering
+	\caption{Fitting Precision of Contrast Masking Effect.}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Function & RMSE & R-square & Adjusted R-square \\
+		\hline
+		eh-jnd to eh & 1.317 & 0.946 & 0.837 \\
+		\hline
+		eh-jnd to e & 0.623 & 0.991 & 0.972 \\
+		\hline
+		eh-jnd to d & 0.33 & 0.967 & 0.956 \\
+		\hline
+		eh-jnd to eh, e and d & 2.238 & 0.812 & 0.807 \\
+		\hline
+	\end{tabular}%
+	\label{tab:fit_precition_eh}%
+\end{table}%
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\subfigure[]{\resizebox*{9cm}{!}{\includegraphics{subjective_result_eh_e}}}
+	\subfigure[]{\resizebox*{9cm}{!}{\includegraphics{subjective_result_eh_d}}}
+	\caption{Subjective experiment result of contrast masking part.}
+	\label{fig:subjective_result_eh}
+\end{figure}
+\begin{figure}[!t]
+	\centering
+	% Requires \usepackage{graphicx}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_bg}}}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_e}}}
+	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_depth}}}
+	\caption{Fitting curves for contrast masking experimental result.}
+	\label{fig:curve_fitting_eh}
+\end{figure}
+\subsection{VR-JND}
+Taking both the luminance adaptation effect and contrast masking effect into consideration, the final VR-JND can be refined as
+\begin{equation}
+VR-JND= F_{bg}+F_{eh}-C^{gr}\cdot \min \left\{F_{bg}, F_{eh}\right\}
+\end{equation}
+where $F_{bg}$ represents the luminance adaptation effect, $C^{gr}$ is gain reduction parameter that measures the overlapping effect, and is set as $0.8$ empirically.
 \section{Conclusion}
 
 
