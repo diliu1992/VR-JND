@@ -1,5 +1,5 @@
-function fjnd_eh = func_fjnd_eh(d,e)
-fjnd_eh = f3(d).*f2(e);
+function fjnd_eh = func_fjnd_eh(eh,e)
+fjnd_eh = func_spatial_contrast(eh) .*f2(e);
 end
 
 %% Spatial contrast of SJND
@@ -16,12 +16,10 @@ jnd_spat_cont = 0.0525*eh+14;
 end
 
 %% Multiplier for eh of SJND
-function fact_cont_fov = f2(e)
-fact_cont_fov = 0.08*e+13.3;
+function fact_lum_fov = f2(e)
+fact__fov = 0.037*power(e,1.5)+9.65;
 end
-function fact_cont_fov = f3(d)
-fact_cont_fov = 18.76*d-3.517;
-end
+
 function fact_cont_fov = func_factor_cont_fov(eh, v, e)
 fact_cont_fov = power(func_W_cont_fov(v,e), func_I_cont_fov(eh));
 end

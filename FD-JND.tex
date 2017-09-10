@@ -307,7 +307,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Virtual Reality Based Just Noticeable Difference Model for Stereoscopic Images}
+\title{Virtual Reality Based Just-Noticeable-Distortion Model for Stereoscopic Images}
 %
 %
 % author names and IEEE memberships
@@ -375,12 +375,12 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-
+Depth is important information in real stereoscopic viewing. As the development of stereoscopic resources and virtual reality technology, the role of depth information in the human visual system is in need to be investigated for the requirement to make stereoscopic data perceptually friendly. In this paper, we develop a vr based jnd model to quantify the perceptual redundancy of image in the vr display environment. The proposed model considers both luminance adaptation and contrast masking. Furthermore, the effects of both foveation and depth on luminance adaptation and contrast masking are investigated and well fitted.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Foveated just-noticeable-difference (FJND), VR-JND, luminance adaptation, contrast masking, disparity masking, stereoscopic images.
+Foveated just-noticeable-distortion (FJND), VR-JND, luminance adaptation, contrast masking, disparity masking, stereoscopic images.
 \end{IEEEkeywords}
 
 
@@ -389,7 +389,7 @@ Foveated just-noticeable-difference (FJND), VR-JND, luminance adaptation, contra
 \section{Introduction}
 \IEEEPARstart{R}{ecently}, as the release of commercial head-mounted devices (HMD) such as HTC VIVE and Sony PlayStation VR, virtual reality (VR) is enjoy a new booming development. VR provides a realistic and immersive simulation of a three-dimensional 360-degree environment, so that it can be widely applied into entertainment, healthcare, education, trainment, engineering, etc. However, large data capacity is a consequent problem of VR for the goal to provide realistic viewing experience. VR data is regarded as a kind of stereoscopic resourse. It is clearly advantageous to study the characteristics of the human visual system (HVS) to stereopsis for enhancing the quality of VR experience.
 
-The visual sensitivity of the HVS is limited. The just noticeable difference (JND) or the difference threshold refers to the minimum visibility threshold below which the pixel level variations cannot be perceived by the HVS \cite{RN634}. As a charactor of HVS, JND is widely applied into fields e.g. image/video compression, visual qualtiy assessment, etc. 
+The visual sensitivity of the HVS is limited. The just noticeable distortion (JND) or the distortion threshold refers to the minimum visibility threshold below which the pixel level variations cannot be perceived by the HVS \cite{RN634}. As a charactor of HVS, JND is widely applied into fields e.g. image/video compression, visual qualtiy assessment, etc. 
 
 In the literature, several computational models have been proposed for estimating pixel-wise JND for 2D image and video. There are many factors related to the visibility of threshold of a particular stimuli. Chou \textit{et al.} proposed one of the earliest JND model in \cite{RN634}, which was built with background lumilance adaptation and contrast masking. Wu \textit{et al.} proposed that the HVS is insensitive to the disorderly pattern and considered pattern complexity into JND modeling \cite{RN649, RN639, Wu2017Enhanced}. Visual acuity is another factor which influences JND. The fovea which is at the center of the retina has the highest density of cone and ganglion cells and the density of sensor cells drops as the retinal eccenticity increases. Thus, a foveated model that the salient part be coded with higher quality is considered in image and video compression \cite{RN652, RN650} for the fovea has the highest visual acuity. A specific model named foveated JND (FJND) which maps the function between JND with lumilance adaptation and fovea eccentricity was proposed by Chen \textit{et al.} in \cite{RN635}. Li \textit{et al.} improved the FJND model by modeling the function between JND with contrast masking and fovea eccentricity in \cite{RN633}.
 
@@ -512,7 +512,7 @@ F_{bg}=m_1\cdot f_1 \cdot d_1
 				\hline
 		bg-jnd to e & 0.623 & 0.991 & 0.972 \\
 				\hline
-		bg-jnd to d & 0.33 & 0.967 & 0.956 \\
+		bg-jnd to d & 0.330 & 0.967 & 0.956 \\
 				\hline
 		bg-jnd to bg, e and d & 2.238 & 0.812 & 0.807 \\
 				\hline
@@ -530,23 +530,24 @@ F_{bg}=m_1\cdot f_1 \cdot d_1
 \begin{figure}[!t]
 	\centering
 	% Requires \usepackage{graphicx}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_bg}}}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_e}}}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_depth}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_bgjnd_bg}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_bgjnd_e}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_bgjnd_depth}}}
 	\caption{Fitting curves for luminance adaptatation experimental result.}
 	\label{fig:curve_fitting_bg}
 \end{figure}
 \subsection{Contrast Masking}
 Subjective experiment result of contrast masking part is shown in Fig. \ref{fig:subjective_result_eh}. The contrast masking effect is also influenced by three factors, the relationship can not be illustrated geometrically. However, we can illustrate the relationship between jnd and two factors with a 3D surface by averaging on the rest dimension. As shown in Fig. \ref{fig:subjective_result_eh}, the surface is averaging on the depth dimension, and it shows the relationship between jnd with luminance contrast and retinal eccentricity. As contrast increases, the JND increases as the luminance gets higher. In order to form the function between jnd and three factors, firtly, we investigate the relationshio between jnd and one fator once as shown in the Fig. \ref{fig:curve_fitting_eh}. The mean eh-jnd of $y$ axis represents the average jnd value for the variable of $x$ axis. The fitting curve of jnd to contrast, retinal eccentricity and depth can be represented by $m_2$, $f_2$ and $d_2$ respectively as
 \begin{equation}
-m_1=a_1\cdot bg^2+a_2\cdot bg+a_3
+m_2=b_1\cdot eh+b_2
 \end{equation}
 \begin{equation}
-f_1=a_4\cdot e^{a_5}+a_6
+f_2=b_3\cdot e+b_4
 \end{equation}
 \begin{equation}
-d_1=a_7\cdot d+a_8
+d_2=b_5\cdot d+b_6
 \end{equation}
+with $b_1=0.0525$, $b_2=14$, $b_3=0.08$, $b_4=13.3$, $b_5=0.0798$ and $b_6=-0.0158$.
 The fitting precision for contrast masking is list in Tab. \ref{tab:fit_precition_eh}. The contrast masking effect can be written by
 \begin{equation}
 F_{eh}=m_2\cdot f_2 \cdot d_2
@@ -558,13 +559,13 @@ F_{eh}=m_2\cdot f_2 \cdot d_2
 		\hline
 		Function & RMSE & R-square & Adjusted R-square \\
 		\hline
-		eh-jnd to eh & 1.317 & 0.946 & 0.837 \\
+		eh-jnd to eh & 0.556 & 0.923 & 0.885 \\
 		\hline
-		eh-jnd to e & 0.623 & 0.991 & 0.972 \\
+		eh-jnd to e & 0.237 & 0.969 & 0.954 \\
 		\hline
-		eh-jnd to d & 0.33 & 0.967 & 0.956 \\
+		eh-jnd to d & 0.304 & 0.992 & 0.990 \\
 		\hline
-		eh-jnd to eh, e and d & 2.238 & 0.812 & 0.807 \\
+		eh-jnd to eh, e and d & 3.180 & 0.485 & 0.472 \\
 		\hline
 	\end{tabular}%
 	\label{tab:fit_precition_eh}%
@@ -580,9 +581,9 @@ F_{eh}=m_2\cdot f_2 \cdot d_2
 \begin{figure}[!t]
 	\centering
 	% Requires \usepackage{graphicx}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_bg}}}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_e}}}
-	\subfigure[]{\resizebox*{4.3cm}{!}{\includegraphics{fitted_bgjnd_depth}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_ehjnd_eh}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_ehjnd_e}}}
+	\subfigure[]{\resizebox*{4.35cm}{!}{\includegraphics{fitted_ehjnd_depth}}}
 	\caption{Fitting curves for contrast masking experimental result.}
 	\label{fig:curve_fitting_eh}
 \end{figure}
@@ -592,8 +593,11 @@ Taking both the luminance adaptation effect and contrast masking effect into con
 VR-JND= F_{bg}+F_{eh}-C^{gr}\cdot \min \left\{F_{bg}, F_{eh}\right\}
 \end{equation}
 where $F_{bg}$ represents the luminance adaptation effect, $C^{gr}$ is gain reduction parameter that measures the overlapping effect, and is set as $0.8$ empirically.
-\section{Conclusion}
 
+\section{Conclusion}
+In this paper, we propose a virtual reality based just-noticeable-distortion model for stereoscopic images based on psychophysical experiments. The foveation effect and depth effect for luminance adaptation and contrast masking are both model in the VR viewing condition. It is the first time that the JND porperty of HVS is investigated in the VR environment. We got a good fitting precision for both the luminance adaptation and contrast masking effects.
+
+.
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.

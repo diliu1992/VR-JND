@@ -9,14 +9,15 @@ lum(:,4)=ave_jnd_bg;
 figure
 
 %观测值
-jnd_bg = lum(:,4);
-bg = lum(:,1);
-e = lum(:,2);
-depth = lum(:,3);
+jnd_eh = con(:,4);
+eh = con(:,1);
+bg = 200*ones(80,1);
+e = con(:,2);
+depth = con(:,3);
 %fjnd
 v = 1536;
-fjnd_bg = func_fjnd_bg(bg,v,e);
-AVG_Ratio = jnd_bg./fjnd_bg;
+fjnd_eh = func_fjnd_eh(d,e);
+AVG_Ratio = jnd_eh./fjnd_eh;
 
 %cftool;
 
@@ -32,7 +33,7 @@ AVG_Ratio = jnd_bg./fjnd_bg;
 
 %拟合系数
 N = length(AVG_Ratio);
-[p SSE residual]=  lsqcurvefit(F, [0 0], [depth bg], AVG_Ratio);
+[p SSE residual]=  lsqcurvefit(F, [0 0], [depth eh], AVG_Ratio);
 
 p
 SSE
@@ -40,7 +41,7 @@ SSE
 
 %RMSE ,RSquare, AdjSquare 的计算结果貌似有些问题
 %计算RMSE
-rmse = sqrt( SSE / N);  
+rmse = sqrt( SSE / N)  
 
 %计算R square
 predictedRatio = AVG_Ratio + residual;
