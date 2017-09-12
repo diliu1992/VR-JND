@@ -2,7 +2,7 @@
 % e=5:40;
 % [X,Y]=meshgrid(bg,e);
 % JND=func_fjnd_bg(X,1536,Y);
-% figure
+% figuredraw
 % surf(bg,e,JND);
 % figure
 % jnd_lum_adapt = 0.000269*power(bg,2)-0.03652*bg+13.5;

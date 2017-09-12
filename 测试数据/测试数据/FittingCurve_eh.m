@@ -16,7 +16,7 @@ e = con(:,2);
 depth = con(:,3);
 %fjnd
 v = 1536;
-fjnd_eh = func_fjnd_eh(depth,e);
+fjnd_eh = func_fjnd_eh(eh,e);
 AVG_Ratio = jnd_eh./fjnd_eh;
 
 %cftool;
@@ -33,7 +33,7 @@ AVG_Ratio = jnd_eh./fjnd_eh;
 
 %ÄâºÏÏµÊý
 N = length(AVG_Ratio);
-[p SSE residual]=  lsqcurvefit(F, [0 0], eh, AVG_Ratio);
+[p SSE residual]=  lsqcurvefit(F, [0 0], depth, AVG_Ratio);
 
 p
 SSE

@@ -1,5 +1,5 @@
-function fjnd_eh = func_fjnd_eh(d,e)
-fjnd_eh = f3(d).*f2(e);
+function fjnd_eh = func_fjnd_eh(eh,e)
+fjnd_eh = func_spatial_contrast(eh).*f2(e);
 end
 
 %% Spatial contrast of SJND
@@ -12,7 +12,7 @@ function jnd_spat_cont = func_spatial_contrast(eh)
 % alpha_bg    = bg .* 0.0001 + 0.115;
 % beta_bg     = MIU - bg.* 0.01;
 % jnd_spat_cont   = eh .* alpha_bg + beta_bg;
-jnd_spat_cont = 0.0525*eh+14;
+jnd_spat_cont = 0.0008437*power(eh,2)+0.007625*eh+13.85;
 end
 
 %% Multiplier for eh of SJND

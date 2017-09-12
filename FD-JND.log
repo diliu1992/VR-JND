@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  8 SEP 2017 21:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  12 SEP 2017 15:36
 entering extended mode
 **FD-JND.tex
 (D:\Project\VR-JND\FD-JND.tex
@@ -259,173 +259,213 @@ LaTeX Font Info:    ... okay on input line 302.
 
 
 ]
-<figure/blndspot.jpg, id=9, 376.40625pt x 278.54062pt>
-File: figure/blndspot.jpg Graphic file (type jpg)
+<figure/acuity_eccentricity.pdf, id=9, 581.10962pt x 434.03455pt>
+File: figure/acuity_eccentricity.pdf Graphic file (type pdf)
 
-<use figure/blndspot.jpg>
-Package pdftex.def Info: figure/blndspot.jpg used on input line 415.
-(pdftex.def)             Requested size: 258.0pt x 190.93517pt.
+<use figure/acuity_eccentricity.pdf>
+Package pdftex.def Info: figure/acuity_eccentricity.pdf used on input line 415.
+
+(pdftex.def)             Requested size: 258.0pt x 192.70435pt.
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 415--415
  [][] 
  []
 
+<figure/acuity_distance.pdf, id=10, 532.5034pt x 351.39882pt>
+File: figure/acuity_distance.pdf Graphic file (type pdf)
 
+<use figure/acuity_distance.pdf>
+Package pdftex.def Info: figure/acuity_distance.pdf used on input line 445.
+(pdftex.def)             Requested size: 258.0pt x 170.25127pt.
 
-pdfTeX warning: pdflatex.exe (file D:/Project/VR-JND/figure/Drawing1.pdf): PDF 
-inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figure/Drawing1.pdf, id=10, 445.8256pt x 539.91714pt>
-File: figure/Drawing1.pdf Graphic file (type pdf)
-
-<use figure/Drawing1.pdf>
-Package pdftex.def Info: figure/Drawing1.pdf used on input line 447.
-(pdftex.def)             Requested size: 258.0pt x 312.45189pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 447--447
+Overfull \hbox (6.0pt too wide) in paragraph at lines 445--445
  [][] 
  []
 
-[2 <D:/Project/VR-JND/figure/blndspot.jpg>]
-Underfull \vbox (badness 1281) has occurred while \output is active []
+[2 <D:/Project/VR-JND/figure/acuity_eccentricity.pdf, page is rotated 90 degree
+s> <D:/Project/VR-JND/figure/acuity_distance.pdf, page is rotated 90 degrees>]
+<figure/axis_trans.pdf, id=53, 373.92386pt x 349.59628pt>
+File: figure/axis_trans.pdf Graphic file (type pdf)
 
+<use figure/axis_trans.pdf>
+Package pdftex.def Info: figure/axis_trans.pdf used on input line 464.
+(pdftex.def)             Requested size: 258.0pt x 241.22168pt.
 
-<figure/Drawing2.pdf, id=21, 388.80257pt x 279.23322pt>
-File: figure/Drawing2.pdf Graphic file (type pdf)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 464--464
+ [][] 
+ []
 
-<use figure/Drawing2.pdf>
-Package pdftex.def Info: figure/Drawing2.pdf used on input line 461.
-(pdftex.def)             Requested size: 258.0pt x 185.30002pt.
+<figure/L_pattern.pdf, id=54, 388.27791pt x 352.32669pt>
+File: figure/L_pattern.pdf Graphic file (type pdf)
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 461--461
+<use figure/L_pattern.pdf>
+Package pdftex.def Info: figure/L_pattern.pdf used on input line 475.
+(pdftex.def)             Requested size: 388.27695pt x 352.32582pt.
+
+<figure/luminance.png, id=55, 962.09438pt x 540.51938pt>
+File: figure/luminance.png Graphic file (type png)
+
+<use figure/luminance.png>
+Package pdftex.def Info: figure/luminance.png used on input line 476.
+(pdftex.def)             Requested size: 962.09203pt x 540.51805pt.
+
+Overfull \hbox (4.09239pt too wide) in paragraph at lines 475--477
  [][] 
  []
 
 
+Overfull \hbox (4.0695pt too wide) in paragraph at lines 475--477
+ [] 
+ []
 
-pdfTeX warning: pdflatex.exe (file D:/Project/VR-JND/figure/ContrastSketch.pdf)
-: PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figure/ContrastSketch.pdf, id=22, 961.20905pt x 541.64162pt>
-File: figure/ContrastSketch.pdf Graphic file (type pdf)
 
-<use figure/ContrastSketch.pdf>
-Package pdftex.def Info: figure/ContrastSketch.pdf used on input line 469.
-(pdftex.def)             Requested size: 247.6778pt x 139.55898pt.
-File: figure/ContrastSketch.pdf Graphic file (type pdf)
- <use figure/ContrastSketch.pdf>
-Package pdftex.def Info: figure/ContrastSketch.pdf used on input line 482.
-(pdftex.def)             Requested size: 247.6778pt x 139.55898pt.
+Underfull \vbox (badness 2376) has occurred while \output is active []
 
-Underfull \vbox (badness 1142) has occurred while \output is active []
+ [3 <D:/Project/VR-JND/figure/axis_trans.pdf, page is rotated 90 degrees> <D:/P
+roject/VR-JND/figure/L_pattern.pdf, page is rotated 90 degrees> <D:/Project/VR-
+JND/figure/luminance.png>] <figure/C_pattern.pdf, id=82, 393.50755pt x 358.8630
+2pt>
+File: figure/C_pattern.pdf Graphic file (type pdf)
 
- [3 <D:/Project/VR-JND/figure/Drawing1.pdf> <D:/Project/VR-JND/figure/Drawing2.
-pdf> <D:/Project/VR-JND/figure/ContrastSketch.pdf>]
-<figure/subjective_result_bg_e.pdf, id=37, 404.70497pt x 282.70018pt>
+<use figure/C_pattern.pdf>
+Package pdftex.def Info: figure/C_pattern.pdf used on input line 486.
+(pdftex.def)             Requested size: 393.50658pt x 358.86214pt.
+
+<figure/contrast.png, id=83, 962.84718pt x 542.025pt>
+File: figure/contrast.png Graphic file (type png)
+
+<use figure/contrast.png>
+Package pdftex.def Info: figure/contrast.png used on input line 487.
+(pdftex.def)             Requested size: 962.84483pt x 542.02367pt.
+
+Overfull \hbox (4.07709pt too wide) in paragraph at lines 486--488
+ [][] 
+ []
+
+
+Overfull \hbox (4.06418pt too wide) in paragraph at lines 486--488
+ [] 
+ []
+
+<figure/subjective_result_bg_e.pdf, id=84, 404.70497pt x 282.70018pt>
 File: figure/subjective_result_bg_e.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_bg_e.pdf>
 Package pdftex.def Info: figure/subjective_result_bg_e.pdf used on input line 5
-25.
+21.
 (pdftex.def)             Requested size: 404.70398pt x 282.69948pt.
 
-<figure/subjective_result_bg_d.pdf, id=38, 404.70497pt x 282.70018pt>
+<figure/subjective_result_bg_d.pdf, id=85, 404.70497pt x 282.70018pt>
 File: figure/subjective_result_bg_d.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_bg_d.pdf>
 Package pdftex.def Info: figure/subjective_result_bg_d.pdf used on input line 5
-26.
+22.
 (pdftex.def)             Requested size: 404.70398pt x 282.69948pt.
 
-Overfull \hbox (4.0832pt too wide) in paragraph at lines 525--527
+Overfull \hbox (4.0832pt too wide) in paragraph at lines 521--523
  [][] 
  []
 
 
-Overfull \hbox (4.0832pt too wide) in paragraph at lines 525--527
+Overfull \hbox (4.0832pt too wide) in paragraph at lines 521--523
  [] 
  []
 
-<figure/fitted_bgjnd_bg.pdf, id=39, 316.22441pt x 208.12756pt>
+<figure/fitted_bgjnd_bg.pdf, id=86, 316.22441pt x 208.12756pt>
 File: figure/fitted_bgjnd_bg.pdf Graphic file (type pdf)
 
 <use figure/fitted_bgjnd_bg.pdf>
-Package pdftex.def Info: figure/fitted_bgjnd_bg.pdf used on input line 533.
+Package pdftex.def Info: figure/fitted_bgjnd_bg.pdf used on input line 529.
 (pdftex.def)             Requested size: 316.22363pt x 208.12704pt.
 
-<figure/fitted_bgjnd_e.pdf, id=40, 326.72063pt x 207.77625pt>
+<figure/fitted_bgjnd_e.pdf, id=87, 326.72063pt x 207.77625pt>
 File: figure/fitted_bgjnd_e.pdf Graphic file (type pdf)
 
 <use figure/fitted_bgjnd_e.pdf>
-Package pdftex.def Info: figure/fitted_bgjnd_e.pdf used on input line 534.
+Package pdftex.def Info: figure/fitted_bgjnd_e.pdf used on input line 530.
 (pdftex.def)             Requested size: 326.71982pt x 207.77573pt.
 
-<figure/fitted_bgjnd_depth.pdf, id=41, 336.28636pt x 207.37476pt>
+<figure/fitted_bgjnd_depth.pdf, id=88, 336.28636pt x 207.37476pt>
 File: figure/fitted_bgjnd_depth.pdf Graphic file (type pdf)
 
 <use figure/fitted_bgjnd_depth.pdf>
-Package pdftex.def Info: figure/fitted_bgjnd_depth.pdf used on input line 535.
+Package pdftex.def Info: figure/fitted_bgjnd_depth.pdf used on input line 531.
 (pdftex.def)             Requested size: 336.28552pt x 207.37424pt.
- [4 <D:/Project/VR-JND/figure/subjective_result_bg_e.pdf> <D:/Project/VR-JND/fi
-gure/subjective_result_bg_d.pdf>]
-<figure/subjective_result_eh_e.pdf, id=53, 401.24907pt x 282.70018pt>
+
+<figure/subjective_result_eh_e.pdf, id=89, 401.24907pt x 282.70018pt>
 File: figure/subjective_result_eh_e.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_eh_e.pdf>
 Package pdftex.def Info: figure/subjective_result_eh_e.pdf used on input line 5
-76.
+57.
 (pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
 
-<figure/subjective_result_eh_d.pdf, id=54, 401.24907pt x 282.70018pt>
+<figure/subjective_result_eh_d.pdf, id=90, 401.24907pt x 282.70018pt>
 File: figure/subjective_result_eh_d.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_eh_d.pdf>
 Package pdftex.def Info: figure/subjective_result_eh_d.pdf used on input line 5
-77.
+58.
 (pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
 
-Overfull \hbox (4.0883pt too wide) in paragraph at lines 576--578
+Overfull \hbox (4.0883pt too wide) in paragraph at lines 557--559
  [][] 
  []
 
 
-Overfull \hbox (4.0883pt too wide) in paragraph at lines 576--578
+Overfull \hbox (4.0883pt too wide) in paragraph at lines 557--559
  [] 
  []
 
-<figure/fitted_ehjnd_eh.pdf, id=55, 335.00156pt x 208.12756pt>
+<figure/fitted_ehjnd_eh.pdf, id=91, 335.00156pt x 208.12756pt>
 File: figure/fitted_ehjnd_eh.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_eh.pdf>
-Package pdftex.def Info: figure/fitted_ehjnd_eh.pdf used on input line 584.
+Package pdftex.def Info: figure/fitted_ehjnd_eh.pdf used on input line 565.
 (pdftex.def)             Requested size: 335.00073pt x 208.12704pt.
 
-<figure/fitted_ehjnd_e.pdf, id=56, 335.00156pt x 208.21991pt>
+<figure/fitted_ehjnd_e.pdf, id=92, 335.00156pt x 208.21991pt>
 File: figure/fitted_ehjnd_e.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_e.pdf>
-Package pdftex.def Info: figure/fitted_ehjnd_e.pdf used on input line 585.
+Package pdftex.def Info: figure/fitted_ehjnd_e.pdf used on input line 566.
 (pdftex.def)             Requested size: 335.00073pt x 208.21939pt.
 
-<figure/fitted_ehjnd_depth.pdf, id=57, 328.00542pt x 208.21991pt>
+<figure/fitted_ehjnd_depth.pdf, id=93, 328.00542pt x 208.21991pt>
 File: figure/fitted_ehjnd_depth.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_depth.pdf>
-Package pdftex.def Info: figure/fitted_ehjnd_depth.pdf used on input line 586.
+Package pdftex.def Info: figure/fitted_ehjnd_depth.pdf used on input line 567.
 (pdftex.def)             Requested size: 328.00461pt x 208.21939pt.
- [5 <D:/Project/VR-JND/figure/fitted_bgjnd_bg.pdf> <D:/Project/VR-JND/figure/fi
-tted_bgjnd_e.pdf> <D:/Project/VR-JND/figure/fitted_bgjnd_depth.pdf> <D:/Project
-/VR-JND/figure/subjective_result_eh_e.pdf> <D:/Project/VR-JND/figure/subjective
-_result_eh_d.pdf> <D:/Project/VR-JND/figure/fitted_ehjnd_eh.pdf> <D:/Project/VR
--JND/figure/fitted_ehjnd_e.pdf> <D:/Project/VR-JND/figure/fitted_ehjnd_depth.pd
-f>] (D:\Project\VR-JND\FD-JND.bbl) [6]
+ [4 <D:/Project/VR-JND/figure/C_pattern.pdf, page is rotated 90 degrees> <D:/Pr
+oject/VR-JND/figure/contrast.png>] [5 <D:/Project/VR-JND/figure/subjective_resu
+lt_bg_e.pdf> <D:/Project/VR-JND/figure/subjective_result_bg_d.pdf> <D:/Project/
+VR-JND/figure/fitted_bgjnd_bg.pdf> <D:/Project/VR-JND/figure/fitted_bgjnd_e.pdf
+> <D:/Project/VR-JND/figure/fitted_bgjnd_depth.pdf> <D:/Project/VR-JND/figure/s
+ubjective_result_eh_e.pdf> <D:/Project/VR-JND/figure/subjective_result_eh_d.pdf
+>] (D:\Project\VR-JND\FD-JND.bbl
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+ [6 <D:/Project/VR-JND/figure/fitted_ehjnd_eh.pdf> <D:/Project/VR-JND/figure/fi
+tted_ehjnd_e.pdf> <D:/Project/VR-JND/figure/fitted_ehjnd_depth.pdf>]) [7
+
+]
 (D:\Project\VR-JND\FD-JND.aux) ) 
 Here is how much of TeX's memory you used:
- 3209 strings out of 495354
- 46946 string characters out of 3183859
- 111728 words of memory out of 3000000
- 6352 multiletter control sequences out of 15000+200000
+ 3234 strings out of 495354
+ 47581 string characters out of 3183859
+ 112828 words of memory out of 3000000
+ 6375 multiletter control sequences out of 15000+200000
  44032 words of font info for 84 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 27i,8n,28p,1870b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,28p,1850b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc
 }<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
@@ -437,9 +477,9 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiK
 TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utm
 r8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FD-JND.pdf (6 pages, 305942 bytes).
+Output written on FD-JND.pdf (7 pages, 547634 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
