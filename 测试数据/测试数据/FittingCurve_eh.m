@@ -2,7 +2,7 @@ close all
 clear
 clc
 load('stat.mat');
-[o1,ave_jnd_eh] = excludeoutlier(con(:,8));
+[o1,ave_jnd_eh] = excludeoutlier(con(:,6:9));
 [o2,ave_jnd_bg] = excludeoutlier(lum(:,[5 6 7 8 10 11]));
 con(:,4)=ave_jnd_eh;
 lum(:,4)=ave_jnd_bg;

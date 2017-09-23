@@ -12,12 +12,12 @@ function jnd_spat_cont = func_spatial_contrast(eh)
 % alpha_bg    = bg .* 0.0001 + 0.115;
 % beta_bg     = MIU - bg.* 0.01;
 % jnd_spat_cont   = eh .* alpha_bg + beta_bg;
-jnd_spat_cont = 0.0008437*power(eh,2)+0.007625*eh+13.85;
+jnd_spat_cont = 0.000367*power(eh,2)-0.009281*eh+10.34;
 end
 
 %% Multiplier for eh of SJND
 function fact_cont_fov = f2(e)
-fact_cont_fov = 0.08*e+13.3;
+fact_cont_fov = 0.1666*e+6.813;
 end
 function fact_cont_fov = f3(d)
 fact_cont_fov = 18.76*d-3.517;

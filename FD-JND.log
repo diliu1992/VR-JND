@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  12 SEP 2017 15:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.22)  23 SEP 2017 13:34
 entering extended mode
 **FD-JND.tex
 (D:\Project\VR-JND\FD-JND.tex
@@ -330,20 +330,19 @@ File: figure/C_pattern.pdf Graphic file (type pdf)
 <use figure/C_pattern.pdf>
 Package pdftex.def Info: figure/C_pattern.pdf used on input line 486.
 (pdftex.def)             Requested size: 393.50658pt x 358.86214pt.
-
-<figure/contrast.png, id=83, 962.84718pt x 542.025pt>
+ <figure/contrast.png, id=83, 963.6pt x 542.025pt>
 File: figure/contrast.png Graphic file (type png)
 
 <use figure/contrast.png>
 Package pdftex.def Info: figure/contrast.png used on input line 487.
-(pdftex.def)             Requested size: 962.84483pt x 542.02367pt.
+(pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 
 Overfull \hbox (4.07709pt too wide) in paragraph at lines 486--488
  [][] 
  []
 
 
-Overfull \hbox (4.06418pt too wide) in paragraph at lines 486--488
+Overfull \hbox (4.07324pt too wide) in paragraph at lines 486--488
  [] 
  []
 
@@ -393,21 +392,21 @@ File: figure/fitted_bgjnd_depth.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/fitted_bgjnd_depth.pdf used on input line 531.
 (pdftex.def)             Requested size: 336.28552pt x 207.37424pt.
 
-<figure/subjective_result_eh_e.pdf, id=89, 401.24907pt x 282.70018pt>
+<figure/subjective_result_eh_e.pdf, id=89, 401.24907pt x 285.71143pt>
 File: figure/subjective_result_eh_e.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_eh_e.pdf>
 Package pdftex.def Info: figure/subjective_result_eh_e.pdf used on input line 5
 57.
-(pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
+(pdftex.def)             Requested size: 401.24808pt x 285.71071pt.
 
-<figure/subjective_result_eh_d.pdf, id=90, 401.24907pt x 282.70018pt>
+<figure/subjective_result_eh_d.pdf, id=90, 401.24907pt x 281.94737pt>
 File: figure/subjective_result_eh_d.pdf Graphic file (type pdf)
 
 <use figure/subjective_result_eh_d.pdf>
 Package pdftex.def Info: figure/subjective_result_eh_d.pdf used on input line 5
 58.
-(pdftex.def)             Requested size: 401.24808pt x 282.69948pt.
+(pdftex.def)             Requested size: 401.24808pt x 281.94667pt.
 
 Overfull \hbox (4.0883pt too wide) in paragraph at lines 557--559
  [][] 
@@ -418,33 +417,37 @@ Overfull \hbox (4.0883pt too wide) in paragraph at lines 557--559
  [] 
  []
 
-<figure/fitted_ehjnd_eh.pdf, id=91, 335.00156pt x 208.12756pt>
+<figure/fitted_ehjnd_eh.pdf, id=91, 382.42867pt x 243.60309pt>
 File: figure/fitted_ehjnd_eh.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_eh.pdf>
 Package pdftex.def Info: figure/fitted_ehjnd_eh.pdf used on input line 565.
-(pdftex.def)             Requested size: 335.00073pt x 208.12704pt.
+(pdftex.def)             Requested size: 382.42772pt x 243.6025pt.
 
-<figure/fitted_ehjnd_e.pdf, id=92, 335.00156pt x 208.21991pt>
+<figure/fitted_ehjnd_e.pdf, id=92, 374.14781pt x 238.99388pt>
 File: figure/fitted_ehjnd_e.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_e.pdf>
 Package pdftex.def Info: figure/fitted_ehjnd_e.pdf used on input line 566.
-(pdftex.def)             Requested size: 335.00073pt x 208.21939pt.
+(pdftex.def)             Requested size: 374.14688pt x 238.99329pt.
 
-<figure/fitted_ehjnd_depth.pdf, id=93, 328.00542pt x 208.21991pt>
+<figure/fitted_ehjnd_depth.pdf, id=93, 395.00565pt x 247.27481pt>
 File: figure/fitted_ehjnd_depth.pdf Graphic file (type pdf)
 
 <use figure/fitted_ehjnd_depth.pdf>
 Package pdftex.def Info: figure/fitted_ehjnd_depth.pdf used on input line 567.
-(pdftex.def)             Requested size: 328.00461pt x 208.21939pt.
+(pdftex.def)             Requested size: 395.00467pt x 247.2742pt.
  [4 <D:/Project/VR-JND/figure/C_pattern.pdf, page is rotated 90 degrees> <D:/Pr
-oject/VR-JND/figure/contrast.png>] [5 <D:/Project/VR-JND/figure/subjective_resu
-lt_bg_e.pdf> <D:/Project/VR-JND/figure/subjective_result_bg_d.pdf> <D:/Project/
-VR-JND/figure/fitted_bgjnd_bg.pdf> <D:/Project/VR-JND/figure/fitted_bgjnd_e.pdf
-> <D:/Project/VR-JND/figure/fitted_bgjnd_depth.pdf> <D:/Project/VR-JND/figure/s
-ubjective_result_eh_e.pdf> <D:/Project/VR-JND/figure/subjective_result_eh_d.pdf
->] (D:\Project\VR-JND\FD-JND.bbl
+oject/VR-JND/figure/contrast.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <D:/Project/VR-JND/figure/subjective_result_bg_e.pdf> <D:/Project/VR-JND/fi
+gure/subjective_result_bg_d.pdf> <D:/Project/VR-JND/figure/fitted_bgjnd_bg.pdf>
+ <D:/Project/VR-JND/figure/fitted_bgjnd_e.pdf> <D:/Project/VR-JND/figure/fitted
+_bgjnd_depth.pdf> <D:/Project/VR-JND/figure/subjective_result_eh_e.pdf> <D:/Pro
+ject/VR-JND/figure/subjective_result_eh_d.pdf>] (D:\Project\VR-JND\FD-JND.bbl [
+6 <D:/Project/VR-JND/figure/fitted_ehjnd_eh.pdf> <D:/Project/VR-JND/figure/fitt
+ed_ehjnd_e.pdf> <D:/Project/VR-JND/figure/fitted_ehjnd_depth.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -453,8 +456,7 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
- [6 <D:/Project/VR-JND/figure/fitted_ehjnd_eh.pdf> <D:/Project/VR-JND/figure/fi
-tted_ehjnd_e.pdf> <D:/Project/VR-JND/figure/fitted_ehjnd_depth.pdf>]) [7
+) [7
 
 ]
 (D:\Project\VR-JND\FD-JND.aux) ) 
@@ -465,7 +467,7 @@ Here is how much of TeX's memory you used:
  6375 multiletter control sequences out of 15000+200000
  44032 words of font info for 84 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 27i,8n,28p,1850b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,28p,1850b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc
 }<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
@@ -477,7 +479,7 @@ nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiK
 TeX/fonts/type1/urw/times/utmbi8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utm
 r8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FD-JND.pdf (7 pages, 547634 bytes).
+Output written on FD-JND.pdf (7 pages, 563693 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

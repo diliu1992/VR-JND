@@ -52,7 +52,7 @@ end
 
 txtPath = 'D:\Project\VR-JND\测试数据\测试数据\contrast\20_80';
 txtFiles = dir(fullfile(txtPath, '*.txt'));
-contrast = zeros(80,6,5);
+contrast = zeros(80,6,13);
 for i = 1:length(txtFiles)
     filename = txtFiles(i).name;
     delimiter = {',',' ',':'};
@@ -93,10 +93,10 @@ for i=1:5
 end
  
 %% 输出结果
-con = zeros(80,9);
+con = zeros(80,17);
 con(:,1)=contrast(:,5,1);
 con(:,2)=contrast(:,6,1);
 con(:,3)=contrast(:,1,1);
-for i=1:5
+for i=1:13
     con(:,4+i)=contrast(:,4,i);
 end
